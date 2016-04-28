@@ -1,8 +1,10 @@
-
+/*--------------------------------
+ * @author Wayne Parrott
+ * --------------------------------
+ */
 
 
 function config() {
-    console.log('config');
     layout();
     createStars(100);
     startRotate();
@@ -40,6 +42,7 @@ function doResize() {
 }
 
 //----------------------------------------------------------------------------------------
+// create stars
 
 function randomIntBetween(a, b) {
     return Math.floor(Math.random()*(b-a+1)+a);
@@ -67,8 +70,6 @@ function createStars(numStars) {
 }
 
 //----------------------------------------------------------------------------------------
-//config();
-
+//register event handlers
 $( window ).resize(doResize);
-
 $(document).ready(config);
