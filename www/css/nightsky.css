@@ -1,0 +1,51 @@
+
+
+body {        
+    width: 100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+    background-image: linear-gradient( #063053, black);
+}
+
+#starField {  
+  background-color: transparent;
+   
+  perspective: 500px;
+  transform-origin: 50% 50%;
+  transform: translate3d(0%,-20%,0px) rotateX(-20deg) rotateZ(0deg);
+}
+
+.star {
+   /* background: radial-gradient(circle at center, rgba(255, 255, 255, .7) 10%, transparent 50%); */
+   /* background: radial-gradient(circle at center, rgba(255, 255, 255, 1.0) 10%, transparent 95%); */
+   background-color: white; 
+   position: absolute;  
+   opacity: 1.0;  
+}
+
+#foreground {
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  height: 50%;
+  background-image: linear-gradient( #101010, darkslategrey);  
+  z-index: 1000;
+}
+
+.rotate {
+  -webkit-animation: spinZ 100s infinite linear;
+          animation: spinZ 100s infinite linear;
+}
+
+@-webkit-keyframes spinZ {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
