@@ -10,19 +10,15 @@ body {
 }
 
 #starField {  
-  background-color: transparent;
-   
+  background-color: transparent;   
   perspective: 500px;
   transform-origin: 50% 50%;
   transform: translate3d(0%,-20%,0px) rotateX(-20deg) rotateZ(0deg);
 }
 
 .star {
-   /* background: radial-gradient(circle at center, rgba(255, 255, 255, .7) 10%, transparent 50%); */
-   /* background: radial-gradient(circle at center, rgba(255, 255, 255, 1.0) 10%, transparent 95%); */
    background-color: white; 
    position: absolute;  
-   opacity: 1.0;  
 }
 
 #foreground {
@@ -31,7 +27,6 @@ body {
   width: 100%;
   height: 50%;
   background-image: linear-gradient( #101010, darkslategrey);  
-  z-index: 1000;
 }
 
 .rotate {
