@@ -13,12 +13,13 @@ function config() {
 function layout() {     
      var ht = $(window).height();
      var width = $(window).width(); 
+     var newSize = Math.max(width,ht) * 1.5;
      
      $('body').height(ht);
      
      var starContainer = $('#starField');
-     $(starContainer).width(width * 1.5);
-     $(starContainer).height(ht * 1.5);
+     $(starContainer).width(newSize);
+     $(starContainer).height(newSize);
           
      var foreground = $('#foreground');
      $(foreground).css('top', ht * 0.7);
