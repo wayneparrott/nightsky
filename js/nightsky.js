@@ -10,7 +10,7 @@ var options = {
 function config() {
     layout();
     createStars(100);
-    startRotate('L2R');
+    startRotate();
 }
 
 function layout() {     
