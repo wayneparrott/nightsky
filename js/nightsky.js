@@ -3,11 +3,14 @@
  * --------------------------------
  */
 
+var options = {
+  rotateClass: 'L2R'
+};
 
 function config() {
     layout();
     createStars(100);
-    startRotate();
+    startRotate('L2R');
 }
 
 function layout() {     
@@ -25,12 +28,18 @@ function layout() {
      $(foreground).css('top', ht * 0.7);
 }
 
-function startRotate() {
-    $('#starField').addClass('rotate');
+/**
+ * @param direction String "L2R" or "R2L"
+ */
+function startRotate(direction) {
+    options.rotateClass = 
+        (typeof direction === 'string' && direction === "L2R") ? 'rotateL2R' : 'rotateR2L';
+    
+    $('#starField').addClass(options.rotateClass);
 }
 
 function stopRotate() {
-    $('#startField').removeClass('rotate');
+    $('#startField').removeClass(options.rotateClass);
 }
 
 function doResize() {
